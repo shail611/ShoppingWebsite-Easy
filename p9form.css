@@ -1,0 +1,76 @@
+body{
+  background-color: powderblue;
+}
+table{
+  margin-left:10px;
+  border-spacing:20px;
+  align-items: center;
+
+}
+.span1{
+  width:150px;
+  background-color:blue;
+  padding:10px;
+  height:10px;
+  margin: auto;
+  border-radius:5px;
+  text-align:center;
+  font-style: oblique;
+  font-weight: bold;
+  font-size: 20px;
+  color: white  ;
+}
+.cap{
+  text-align: center;
+  font-size: 25px;
+  font-style: oblique;
+  font-weight: bold;
+}
+.th{
+  width:300px;
+  text-align:left;
+
+}
+p{
+  font-size: 20px;
+  font-weight: bold;
+}
+.t2{
+  width:190px;
+  text-align:left"
+}
+.d1 {
+float: left;
+margin-left:0px;
+margin-top: 20px;
+height:230px;
+width: 450px;
+border-radius:20px;
+
+background-image: url("https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Monochrome-Type-Simple-Background-Image.jpg");
+background-color: purple
+
+}
+.div1 {
+float: left;
+margin-left:400px;
+
+width:680px;
+background-image: linear-gradient(to right,white,purple,violet);
+
+height:1200px;
+border-radius:20px;
+}
+
+.div2 {
+    float: right;
+  margin-left:10px;
+width:750px;
+  background-image: linear-gradient(to right,white,powderblue);
+  padding:0px 0px;
+  height:1200px;
+  border-radius:20px;
+}
+.h{
+  padding:0 150px;
+}

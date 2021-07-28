@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CyberMarket</title>
+    <link rel="stylesheet" href="p9.css">
+  </head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+var m="",f="",l="",g="",mo="",a="",c="",p="",s="",co="";
+  window.addEventListener('load',() =>{
+    const params = (new URL(document.location)).searchParams;
+    const mail = params.get('mail');m=mail;
+    const fname = params.get('fname');f=fname;
+    const lname = params.get('lname');l=lname;
+    const mobile = params.get('MobileNumber');mo=mobile;
+    const gender = params.get('Gender');g=gender;
+    const address1 = params.get('Address');a=address1;
+    const address2 = params.get('City');c=address2;
+    const address3 = params.get('PinCode');p=address3;
+    const address4 = params.get('State');s=address4;
+    const address5 = params.get('Country');co=address5;
+    const name = fname+' '+lname;
+    document.getElementById('thatid').innerHTML = mail;
+    document.getElementById('nameId').innerHTML = name+"          ☺";
+
+  })
+  function getFName(){
+    return f;
+  }
+  function getLName(){
+    return l;
+  }
+  function getMail(){
+    return m;
+  }
+  function getMobile(){
+    return mo;
+  }
+  function getGender(){
+    return g;
+  }
+  function getAddress1(){
+    return a;
+  }
+  function getAddress2(){
+    return c;
+  }
+  function getAddress3(){
+    return p;
+  }
+  function getAddress4(){
+    return s;
+  }
+  function getAddress5(){
+    return co;
+  }
+
+
+
+</script>
+<script>
+
+
+</script>
+
+  <body ng-app="">
+    <form action="p9cart.html" method="get">
+    <header>
+      <h1>CyberMarket!</h1>
+      <p>A higher form of Shopping</p>
+    </header>
+    <div class="toptag">
+      <h1>CyberMarket!</h1>
+      <p>A higher form of Shopping</p>
+    </div>
+
+    <div class="topnav" >
+      <a href="">Home</a>
+      <button type="button" onclick="location.href='p9account.html?fname='+getFName()+'&lname='+getLName()+'&mail='+getMail()+'&mobile='+getMobile()+'&gender='+getGender()+'&address1='+getAddress1()+'&address2='+getAddress2()+'&address3='+getAddress3()+'&address4='+getAddress4()+'&address5='+getAddress5()" class="ac">My acc</button>
+      <a href="">My orders</a>
+      Mail is: <span id="thatid"></span>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7JXAvASPtvg0pHl0EjLcPQaNFbSwWsAd6dd2nLDZaEB-mroh-Iw-jSxtXnTng57z1dtU&usqp=CAU" alt="">
+      <button type="submit" class="scart" name="cart" >Cart ({{l1+l2+l3+l4+l5+l6+p1+p2+p3+p4+p5+p6}})</button>
+      <a class="cart" ng-init="getUrl()">Welcome <span id="nameId"></span> </a>
+    </div>
+
+    <div class="sidebar">
+      <p>Look for other sites!</p>
+      <div class="dplace">
+        <p>Amazon</p>
+        <div class="dcont">
+          <a  href="https://www.amazon.in/s?k=cloths&ref=nb_sb_noss">Shop Cloths</a>
+          <a  href="https://www.amazon.in/s?k=shoes&ref=nb_sb_noss_2">Shop Shoes</a>
+          <a  href="https://www.amazon.in/s?k=groceries&ref=nb_sb_noss">Shop Groceries</a>
+        </div>
+      </div>
+
+      <div class="dplace">
+        <p>Flipkart</p>
+        <div class="dcont">
+          <a  href="https://www.flipkart.com/search?q=books&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off">Shop Books</a>
+          <a  href="https://www.flipkart.com/search?q=tv&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off">Shop TV</a>
+          <a  href="https://www.flipkart.com/search?q=make-up&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off">Shop Make-up</a>
+        </div>
+      </div>
+
+        </div>
+    <div  style="align-items:center" class="body">
+      <div class="products">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkZKPuN7RvvajNsfxmQOlz2AQVtBV0tX3a8A&usqp=CAU" alt="">
+        <p >HP Pavilion 7.8.9 Price: 10,000 </p>
+        <button type="button" class="A2C" name="a1" ng-click="l1=l1+1" value = "{{l1}}"ng-init="l1=0">Add To Cart </button>
+        <input type="number" name="a1" value="{{l1}}" style="height:20px;width:25px" readonly=true> items
+      </div>
+      <div class="products">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfWUedrUaFSWBb_xrw_j3j2JM5f-e6Brx9Zw&usqp=CAU" alt="">
+        <p>HP Pavilion 14.16.18  Price: 20,000</p>
+        <button type="button" class="A2C" ng-click="l2=l2+1" ng-init="l2=0">Add To Cart</button>
+        <input type="number" name="a2" value="{{l2}}" style="height:20px;width:25px" readonly=true> items
+      </div>
+      <div class="products">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0mFF9Fa94bO_7BS6v4NV4ynkkOquD2faPFw&usqp=CAU" alt="">
+        <p>ASUS MegaZen Price: 30,000</p>
+        <button type="button"  class="A2C" ng-click="l3=l3+1" ng-init="l3=0">Add To Cart</button>
+        <input type="number" name="a3" value="{{l3}}" style="height:20px;width:25px" readonly=true> items
+      </div>
+      <div class="products">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYYV1yxpq7BbcTshWndj3az5UyznIdHredoQ&usqp=CAU" alt="">
+        <p>Dell MultiCore 6.11 Price: 40,000</p>
+        <button  type="button" class="A2C" ng-click="l4=l4+1" ng-init="l4=0">Add To Cart</button>
+        <input type="number" name="a4" value="{{l4}}" style="height:20px;width:25px" readonly=true> items
+      </div>
+      <div class="products">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcN3Py6IMj4Ml8ggVNpggaSVj4vbGzSQEXhw&usqp=CAU" alt="">
+        <p>MacWindow Pro Ed. Price: 50,000</p>
+        <button type="button"  class="A2C" ng-click="l5=l5+1" ng-init="l5=0">Add To Cart</button>
+        <input type="number" name="a5" value="{{l5}}" style="height:20px;width:25px" readonly=true> items
+      </div>
+      <div class="products">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9RdodNBMPr39CX0HA9vskW9LRgsTJG9REZQ&usqp=CAU" alt="">
+        <p>Toshiba Excl. Ultra Price: 60,000</p>
+        <button  type="button" class="A2C" ng-click="l6=l6+1" ng-init="l6=0">Add To Cart</button>
+        <input type="number" name="a6" value="{{l6}}" style="height:20px;width:25px" readonly=true> items
+      </div>
+
+      <div class="products">
+        <img src="https://img.etimg.com/thumb/msid-59424967,width-640,resizemode-4,imgsize-150364/nokia-3310.jpg" alt="">
+        <p>Nokia 3310 Price: 10,000</p>
+        <button  type="button" class="A2C" ng-click="p1=p1+1" ng-init="p1=0">Add To Cart</button>
+        <input type="number" name="b1" value="{{p1}}" style="height:20px;width:25px" readonly=true> items
+      </div>
+      <div class="products">
+        <img src="https://www.gizmochina.com/wp-content/uploads/2019/01/Infinix-Smart-2-HD.png" alt="">
+        <p>Infinix 101 Max Price:20,000</p>
+        <button  type="button" class="A2C" ng-click="p2=p2+1" ng-init="p2=0">Add To Cart</button>
+        <input type="number" name="b2" value="{{p2}}" style="height:20px;width:25px" readonly=true> items
+      </div>
+      <div class="products">
+        <img src="https://www.setaswall.com/wp-content/uploads/2019/09/Realme-5.jpg" alt="">
+        <p>Realme smartphone Price:30,000</p>
+        <button  type="button" class="A2C" ng-click="p3=p3++1" ng-init="p3=0">Add To Cart</button>
+        <input type="number" name="b3" value="{{p3}}" style="height:20px;width:25px" readonly=true> items
+      </div>
+      <div class="products">
+        <img src="https://www.gizmochina.com/wp-content/uploads/2020/05/iphone-12-pro-max-family-hero-all-600x600.jpg" alt="">
+        <p>iPhone 13 Price: 40,000</p>
+        <button  type="button" class="A2C" ng-click="p4=p4+1" ng-init="p4=0">Add To Cart</button>
+        <input type="number" name="b4" value="{{p4}}" style="height:20px;width:25px" readonly=true> items
+      </div>
+      <div class="products">
+        <img src="https://candytech.in/wp-content/uploads/2018/05/Xiaomi-Mi8.jpg" alt="">
+        <p>XIOMI MI Redmi 6 Price:50,000</p>
+        <button  type="button" class="A2C" ng-click="p5=p5+1" ng-init="p5=0">Add To Cart</button>
+        <input type="number" name="b5" value="{{p5}}" style="height:20px;width:25px" readonly=true> items
+      </div>
+      <div class="products">
+        <img src="https://newcastlebeach.org/images/mobile-hd.jpg" alt="">
+        <p>Samsung Galaxy Mars Price: 60,000</p>
+        <button  type="button" class="A2C" ng-click="p6=p6+1" ng-init="p6=0">Add To Cart</button>
+        <input type="number" name="b6" value="{{p6}}" style="height:20px;width:25px" readonly=true> items
+      </div>
+
+    </div>
+
+</form>
+</body>
+</html>

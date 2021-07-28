@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="p9.css">
+  </head>
+  <script>
+  var m="",f="",l="",g="",mo="",a="",c="",p="",s="",co="";
+    window.addEventListener('load',() =>{
+      const params = (new URL(document.location)).searchParams;
+      const mail = params.get('mail');m=mail;
+      const fname = params.get('fname');f=fname;
+      const lname = params.get('lname');l=lname;
+      const mobile = params.get('mobile');mo=mobile;
+      const gender = params.get('gender');g=gender;
+      const address1 = params.get('address1');a=address1;
+      const address2 = params.get('address2');c=address2;
+      const address3 = params.get('address3');p=address3;
+      const address4 = params.get('address4');s=address4;
+      const address5 = params.get('address5');co=address5;
+      document.getElementById("fname").innerHTML=fname;
+      document.getElementById('lname').innerHTML=lname;
+      document.getElementById('mail').innerHTML=mail;
+      document.getElementById('mobile').innerHTML=mobile;
+      document.getElementById('gender').innerHTML=gender;
+      document.getElementById('address').innerHTML=a+" ,"+c+" ,"+p+" ,"+s+" ,"+co;
+
+    })
+    </script>
+  <body>
+    <header>
+      <h1>CyberMarket!</h1>
+      <p>A higher form of Shopping</p>
+    </header>
+    <div class="toptag">
+      <h1>CyberMarket!</h1>
+      <p>A higher from of Shopping</p>
+    </div>
+<span style="text-align:center"><h1>Personal Info</h1></span>
+<div style="font-size:30px;align-items: center;color:purple">
+<table style="padding:50px;margin-left:30%" border="3">
+  <tr>
+    <td><span > First Name:</span></td>
+    <td><span id="fname" ></span> <br></td>
+  </tr>
+  <tr>
+    <td>Last Name:</td>
+    <td><span id="lname"></span></td>
+  </tr>
+  <tr>
+    <td>Mail Id:</td>
+    <td><span id="mail"></span></td>
+  </tr>
+  <tr>
+    <td>Contact Info:</td>
+    <td><span id="mobile"></span></td>
+  </tr>
+  <tr>
+    <td>Gender:</td>
+    <td><span id="gender"></span></td>
+  </tr>
+  <tr>
+    <td>Address:</td>
+    <td> <span id="address"></span> </td>
+  </tr>
+</table>
+
+  <br>
+  <br>
+  <br>
+  <br></div>
+
+  </body>
+</html>

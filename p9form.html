@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="p9form.css">
+  </head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+  <body class="main">
+
+<form name="myform" action="p9.html">
+<p class="cap">CyberMarket Registration</p>
+<!-- use of directives-->
+<div  ng-app="myApp" ng-controller="myCtrl">
+<div class="div1">
+<p>
+  <table >
+    <tr>
+      <td><span class="span1">First Name:</span></td>
+      <!-- use of expression and data binding-->
+      <td><p> <input type="text" name="fname" ng-model="fname" placeholder="{{firstName}}" required>   </p></td>
+    </tr>
+    <tr>
+      <td><span class="span1">Last Name:</span></td>
+      <!-- use of expression and data binding-->
+      <td><p> <input type="text" name="lname" ng-model="lname" placeholder='{{lastName}}' required>   </p></td>
+    </tr>
+
+
+ <br>
+
+
+
+    <tr>
+    <td><span class="span1">Email ID</span></td>
+    <td><p><input type="email" name="mail" ng-model="mail" maxlength="100" id="e" type="email" required></b> </p></td>
+
+    </tr>
+
+    <tr>
+    <td><span class="span1">Password<span></td>
+    <td><input type="password" name="pass" id="pass" required></td>
+    </tr>
+
+
+
+
+
+    <tr>
+      <td style="color:green"> <span class="span1">Mobile number</span></td>
+      <td>
+      <input type="number" name="MobileNumber" ng-model="phone" maxlength="10" min=1000000000 max=9999999999 required></td>
+    </tr>
+
+    <tr>
+      <td ><span class="span1">Gender</span></td>
+      <td>
+      <input type="radio" name="Gender" value="Male" ng-model="gender"> <p style="font-size:20px;color:white">Male</p>
+      <input type="radio" name="Gender" value="Female" ng-model="gender"> <p style="font-size:20px;color:white">Female</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="color:yellow"><span class="span1">Address</span><br><br><br></td>
+      <td><textarea name="Address" ng-model="address" rows="10" cols="50" placeholder="Address" required></textarea></td>
+    </tr>
+
+    <tr>
+      <td style="color:yellow"><span class="span1">City</span></td>
+      <td><input type="text" name="City" ng-model="city" maxlength="50" required>(Max 50 Characters Allowed)</td>
+    </tr>
+
+    <tr>
+      <td><span class="span1">Pin Code</span></td>
+      <td><input type="Number" name="PinCode" ng-model="pin" maxlength="6"  required>(Max 6 Numbers Allowed)</td>
+    </tr>
+
+    <tr>
+      <td><span class="span1">State<span></td>
+      <td><input type="text" name="State" maxlength="50" ng-model="state" required>(Max 50 Characters Allowed)</td>
+    </tr>
+
+    <tr>
+      <td><span class="span1">Country<span></td>
+      <td><input type="text" name="Country" ng-model="country" required></td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td>      <br><br><br><br>
+<button type="submit" name="button" style="text-align:center">Submit</button></td>
+    </tr>
+</table> <br><br>
+
+</form>
+
+
+<script>
+
+// use of modules and controller:
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstName= "Shail";
+    $scope.lastName= "Shah";
+    $scope.mail="19BCE232@NIRMAUNI.ac.in"
+});
+</script>
+  </body>
+</html>
